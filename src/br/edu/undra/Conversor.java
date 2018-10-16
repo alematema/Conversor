@@ -18,7 +18,7 @@ import java.util.Map;
  * Conversor.converter("1,1,1,1,1").naBase(3).paraBase(16) = "7,9"<br>
  * Conversor.converter("1,1,1").naBase(8).paraBase(10) = "7,3"<br>
  * Conversor.converter("1,F").naBase(16).paraBase(2) = "1,1,1,1,1"</strong><br>
- * Ou <strong>qualquer</strong> outra compbinacao.
+ * Ou <strong>qualquer</strong> outra combinacao.
  *
  * @author alexandre
  */
