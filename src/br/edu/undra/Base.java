@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Uma representacao de uma base numérica.
+ * Uma abstracao de uma base numérica.
  *
  * @author alexandre
  */
