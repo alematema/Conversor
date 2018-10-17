@@ -53,12 +53,12 @@ public class Base {
      * Recupera, quando houver, o algarismo especial associado à chave {@code}i.
      * <br>
      * <blockquote><pre>
-     * Exemplo : Na BASE16(HEXADECIMAL) mapeia-se 10 <-> A, 11 <-> B, ... , 15
-     * <-> F<br>
+     * Exemplo : Na BASE16(HEXADECIMAL) mapeia-se 10 para A, 11 para B, ... , 15
+     * para F<br>
      * Entao, o get de 10 é A; o get de 11 é B ... o get de 15 é F.
      *</pre></blockquote>
      * @param i {@code} i é uma chave associada, possivelmente, a um algarismo especial.
-     * @return {@code o valor especial} associado à chave {@chave}i, caso haja.<br>
+     * @return {@code o valor especial} associado à chave {@code}i, caso haja.<br>
      * ou a propria chave {@code}i, caso nao estejam mapeados algarismos especiais.
      * @exception IndexOutOfBoundsException se {@code i < 0 ou i > base-1} 
      */
@@ -86,8 +86,8 @@ public class Base {
      * Recupera, quando houver, a chave associada a um algarismo especial.
      * <br>
      * <blockquote><pre>
-     * Exemplo : Na BASE16(HEXADECIMAL) mapeia-se 10 <-> A, 11 <-> B, ... , 15
-     * <-> F
+     * Exemplo : Na BASE16(HEXADECIMAL) mapeia-se 10 para A, 11 para B, ... , 15
+     * para F
      * Entao, o reverso de A é 10; o reverso de B é 11 ... o reverso de F é 15.
      *</pre></blockquote>
      * @param algarismo um possivel algarismo especial.

@@ -116,7 +116,7 @@ public class Conversor {
      *
      * @param csvString uma String cujos valores estao separados por virgula.
      * @return Uma string sem virgulas separadoras de valores.
-     * <br> Exemplo : RECEBE A,1,0,9,9,1 -> RETORNA A10991
+     * <br> Exemplo : RECEBE A,1,0,9,9,1 , RETORNA A10991
      */
     public static String toString(String csvString) {
         return csvString.replaceAll(",", "");
@@ -200,7 +200,7 @@ public class Conversor {
     }
 
     /**
-     * Settings para converter BASE10 -> baseNumerica
+     * Settings para converter BASE10 para baseNumerica
      *
      * @param baseNumerica
      */
@@ -294,7 +294,7 @@ public class Conversor {
     }
 
     /**
-     * Settings para converter baseNumerica -> BASE10
+     * Settings para converter baseNumerica para BASE10
      *
      * @param baseNumerica
      */
