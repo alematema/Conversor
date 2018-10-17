@@ -1,4 +1,4 @@
-package br.edu.undra;
+package br.edu.undra.conversor;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -128,8 +128,7 @@ public class Conversor {
      * Esta string csv representa os algarismos do numeral escrito na base=base.
      * <br>
      *
-     * @param baseNumerica a base para a qual sera convertido o numero
-     * DECIMAL.
+     * @param baseNumerica a base para a qual sera convertido o numero DECIMAL.
      * @return Uma String CSV ( Comma Separated Value )<br>
      * que representa os algarismos do numeral decimal escrito na base=base.<br>
      * Exemplo : RECEBE 7 e RETORNA 1,1,1
@@ -179,7 +178,7 @@ public class Conversor {
      * <br>
      *
      * @param baseNumerica a base para a qual sera convertido o numBase10.
-     * @param numBase10  o decimal que será convertido.
+     * @param numBase10 o decimal que será convertido.
      * @return Uma String CSV ( Comma Separated Value )<br>
      * que representa os algarismos do numBase10 escrito na base=base.<br>
      * Exemplo : RECEBE 7 e RETORNA 1,1,1
@@ -215,12 +214,14 @@ public class Conversor {
 
     /**
      * Converte uma csv(Comma Separated Value) string em um numBASE10.<br>
-     * Esta csv string foi previamente setada e representa um numeral escrito numa base=base.<br>
-     * Exemplo : recebe 1,1,1 escrito na BASE2 e converte em 7 BASE10 e
-     * armazena em this.numBASE10.
+     * Esta csv string foi previamente setada e representa um numeral escrito
+     * numa base=base.<br>
+     * Exemplo : recebe 1,1,1 escrito na BASE2 e converte em 7 BASE10 e armazena
+     * em this.numBASE10.
      * <br>
-     * @param baseNumerica  a base na qual foi escrito o numeral que sera convertido na
-     * base DECIMAL.
+     *
+     * @param baseNumerica a base na qual foi escrito o numeral que sera
+     * convertido na base DECIMAL.
      * @return uma instancia de conversor.<br>
      * @throws IllegalArgumentException, caso base seja menor ou igual que 1.
      */
@@ -231,10 +232,12 @@ public class Conversor {
 
     /**
      * Converte uma csv(Comma Separated Value) string em um numBASE10.<br>
-     * Esta csv string foi previamente setada e representa um numeral escrito numa base=base.<br>
-     * Exemplo : recebe 1,1,1 escrito na BASE2 e converte em 7 BASE10 e
-     * armazena em this.numBASE10.
+     * Esta csv string foi previamente setada e representa um numeral escrito
+     * numa base=base.<br>
+     * Exemplo : recebe 1,1,1 escrito na BASE2 e converte em 7 BASE10 e armazena
+     * em this.numBASE10.
      * <br>
+     *
      * @param base a base na qual foi escrito o numeral que sera convertido na
      * base DECIMAL.
      * @return uma instancia de conversor.<br>
@@ -265,9 +268,11 @@ public class Conversor {
      * Converte uma csv(Comma Separated Value) string em um numBASE10.<br>
      * Exemplo : recebe 1,1,1, escrita na BASE2, e converte em 7 BASE10.
      * <br>
-     * @param baseNumerica a base na qual foi escrito o numeral que sera convertido na
-     * base DECIMAL.
-     * @param algarismosCSVEscritosNumaBase a csv string, cujos valores sao os algarismos do numeral escrito na base=base.
+     *
+     * @param baseNumerica a base na qual foi escrito o numeral que sera
+     * convertido na base DECIMAL.
+     * @param algarismosCSVEscritosNumaBase a csv string, cujos valores sao os
+     * algarismos do numeral escrito na base=base.
      * @return um numero na base 10, um numBASE10
      */
     private int deAlgarismosCSV(Base baseNumerica, String algarismosCSVEscritosNumaBase) {
@@ -333,18 +338,41 @@ public class Conversor {
 
     public static void main(String[] args) {
 
-        String convertido = Conversor.converter("F,E,D,C,B,A").daBase(16).paraBase(16);
+//        String convertido = Conversor.converter("F,E,D,C,B,A").daBase(16).paraBase(16);
+//
+//        System.err.println(convertido);
+//
+//        convertido = Conversor.converter("F,F,F,F,F,F").daBase(16).paraBase(10);
+//
+//        System.err.println(convertido);
+//
+//        convertido = Conversor.converter("A,A,A,A,A,A").daBase(16).paraBase(10);
+//
+//        System.err.println(convertido);
+//        String semanas = Conversor.converter("7,7").daBase(10).paraBase(7);
+//        System.err.println("semanas " + semanas);
+//
+//        String meses = Conversor.converter(semanas).daBase(10).paraBase(30);
+//        System.err.println("meses " + meses);
+//
+//        String anos = Conversor.converter(meses).daBase(30).paraBase(360);
+//        System.err.println("anos " + anos);
 
-        System.err.println(convertido);
 
-        convertido = Conversor.converter("F,F,F,F,F,F").daBase(16).paraBase(10);
+//        String semanas = Conversor.converter("5,6").daBase(10).paraBase(7);
+//        System.err.println("semanas " + semanas);
+//        
+//        String dias = Conversor.converter(semanas).daBase(7).paraBase(10);
+//        System.err.println("dias " + dias);
 
-        System.err.println(convertido);
+        // dias -> semanas : Conversor.agrupar("5,7").naBase(7) -> "8,1" 
+        // dias -> meses : Conversor.agrupar("5,7").naBase(30) -> "1,27" 
+        // dias -> anos : : Conversor.agrupar("3,7,0").naBase(360) -> "1,10" 
 
-        convertido = Conversor.converter("A,A,A,A,A,A").daBase(16).paraBase(10);
-
-        System.err.println(convertido);
-
+        // dias.agrupar.emSemanas.agruparEmMeses
+        
+        System.out.println(Conversor.converter("9,9,8,6,6,6").daBase(10).paraBase(60));
+        System.out.println(18666/3600);
     }
 
 }

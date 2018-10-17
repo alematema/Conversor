@@ -1,5 +1,6 @@
-package br.edu.undra;
+package br.edu.undra.conversor;
 
+import br.edu.undra.conversor.Base;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.After;

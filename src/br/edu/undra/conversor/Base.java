@@ -1,4 +1,4 @@
-package br.edu.undra;
+package br.edu.undra.conversor;
 
 import java.util.HashMap;
 import java.util.Map;

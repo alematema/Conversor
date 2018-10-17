@@ -1,6 +1,8 @@
-package br.edu.undra;
+package br.edu.undra.conversor;
 
-import static br.edu.undra.Base.*;
+import br.edu.undra.conversor.Base;
+import br.edu.undra.conversor.Conversor;
+import static br.edu.undra.conversor.Base.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
