@@ -50,15 +50,17 @@ public class Base {
     }
 
     /**
-     * Recupera, quando houver, o algarismo especial associado à chave i.
+     * Recupera, quando houver, o algarismo especial associado à chave {@code}i.
      * <br>
+     * <blockquote><pre>
      * Exemplo : Na BASE16(HEXADECIMAL) mapeia-se 10 <-> A, 11 <-> B, ... , 15
      * <-> F<br>
      * Entao, o get de 10 é A; o get de 11 é B ... o get de 15 é F.
-     *
-     * @param i uma chave associada, possivelmente, a um algarismo especial.
-     * @return o valor especial associado à chave i, caso haja.<br>
-     * RETORNA a propria chave, caso nao estejam mapeados algarismos especiais.
+     *</pre></blockquote>
+     * @param i {@code} i é uma chave associada, possivelmente, a um algarismo especial.
+     * @return {@code o valor especial} associado à chave {@chave}i, caso haja.<br>
+     * ou a propria chave {@code}i, caso nao estejam mapeados algarismos especiais.
+     * @exception IndexOutOfBoundsException se {@code i < 0 ou i > base-1} 
      */
     public String get(int i) throws IndexOutOfBoundsException {
 
@@ -83,23 +85,23 @@ public class Base {
     /**
      * Recupera, quando houver, a chave associada a um algarismo especial.
      * <br>
+     * <blockquote><pre>
      * Exemplo : Na BASE16(HEXADECIMAL) mapeia-se 10 <-> A, 11 <-> B, ... , 15
-     * <-> F<br>
+     * <-> F
      * Entao, o reverso de A é 10; o reverso de B é 11 ... o reverso de F é 15.
-     *
-     * @param value um possivel valor especial.
-     * @return a chave associada ao algarismo especial, caso haja.<br>
-     * RETORNA o proprio valor, caso nao estejam mapeados algarismos especiais.
+     *</pre></blockquote>
+     * @param algarismo um possivel algarismo especial.
+     * @return a chave associada ao possível {@code algarismo} especial, caso haja.<br>
+     * ou o proprio {@code}algarismo, caso nao estejam mapeados algarismos especiais.
+     * {@link #algarismosEspeciais}
      */
-    public String reverter(String value) {
-
-        String algarismo = value;
-
+    public String reverter(String algarismo) {
+        
         if (algarismosEspeciais != null) {
 
             for (Map.Entry<Integer, String> entry : algarismosEspeciais.entrySet()) {
 
-                if (entry.getValue().equals(value)) {
+                if (entry.getValue().equals(algarismo)) {
                     algarismo = Integer.toString(entry.getKey());
                     break;
                 }
